@@ -127,7 +127,7 @@ function addFloatingWhatsAppButton() {
 }
 
 function handleNavScroll() {
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("nav.nav-capsule");
   if (!nav) return;
 
   window.addEventListener("scroll", () => {
