@@ -5,32 +5,35 @@
 
 
 
-/* Navigation Styles */
-nav {
+/* Navigation Styles - Floating Capsule */
+nav.nav-capsule {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fdfaf6;
+  border: 1px solid rgba(45, 36, 30, 0.08);
+  box-shadow: 0 4px 20px rgba(45, 36, 30, 0.06);
 }
 
-nav.nav-scrolled {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-  background-color: rgba(253, 248, 248, 0.98) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1) !important;
+nav.nav-capsule.nav-scrolled {
+  background: #fdfaf6;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border-color: rgba(45, 36, 30, 0.1);
+  box-shadow: 0 8px 30px rgba(45, 36, 30, 0.08);
 }
 
-nav.nav-scrolled img[alt="Milestar Shoes"] {
-  height: 3.5rem !important;
+nav.nav-capsule.nav-scrolled img[alt="Milestar Shoes"] {
+  height: 2.5rem !important;
 }
 
 @media (min-width: 768px) {
-  nav.nav-scrolled img[alt="Milestar Shoes"] {
-    height: 5rem !important;
+  nav.nav-capsule.nav-scrolled img[alt="Milestar Shoes"] {
+    height: 3.5rem !important;
   }
 }
 
 .nav-link {
   position: relative;
-  color: #2d241e;
+  color: #1c1b1b;
   transition: color 0.3s ease;
 }
 
@@ -516,15 +519,15 @@ img {
   border-color: rgba(253, 250, 246, 0.1) !important;
 }
 
-/* Navigation Theme Override */
-nav {
-  background-color: rgba(253, 250, 246, 0.8) !important;
-  border-color: rgba(45, 36, 30, 0.05) !important;
+/* Navigation Theme Override - Floating Capsule */
+nav.nav-capsule {
+  background: #fdfaf6 !important;
+  border-color: rgba(45, 36, 30, 0.08) !important;
 }
 
-nav.nav-scrolled {
-  background-color: rgba(253, 250, 246, 0.98) !important;
-  box-shadow: 0 10px 30px -10px rgba(75, 61, 51, 0.1) !important;
+nav.nav-capsule.nav-scrolled {
+  background: #fdfaf6 !important;
+  box-shadow: 0 8px 30px rgba(75, 61, 51, 0.06) !important;
 }
 
 .mobile-menu-overlay {
@@ -794,14 +797,16 @@ html.dark body {
   color: #f4eee1 !important;
 }
 
-html.dark nav {
-  background-color: rgba(15, 13, 11, 0.92) !important;
-  border-bottom-color: rgba(197, 160, 89, 0.08) !important;
+html.dark nav.nav-capsule {
+  background: #0f0d0b !important;
+  border-bottom: none !important;
+  border-color: rgba(197, 160, 89, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
-html.dark nav.nav-scrolled {
-  background-color: rgba(15, 13, 11, 0.98) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4) !important;
+html.dark nav.nav-capsule.nav-scrolled {
+  background: #0f0d0b !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
 }
 
 html.dark .nav-link {
@@ -1108,11 +1113,13 @@ main {
   }
 
   /* -- Nav: compact on mobile -- */
-  nav {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+  nav.nav-capsule {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    top: 8px !important;
+    width: calc(100% - 1rem) !important;
   }
-  nav.nav-scrolled {
+  nav.nav-capsule.nav-scrolled {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
   }
