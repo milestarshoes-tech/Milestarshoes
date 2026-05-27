@@ -184,16 +184,34 @@ nav.nav-capsule.nav-scrolled img[alt="Milestar Shoes"] {
   }
 }
 
+/* Mobile Nav - Three-column grid: Logo | Toggle | Hamburger */
 @media (max-width: 767px) {
+
   .mobile-stack {
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
     align-items: center !important;
     gap: 0 !important;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .mobile-stack > a:first-child {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .theme-switch {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .hamburger {
+    grid-column: 3;
+    justify-self: end;
+    margin-right: 0;
   }
 }
+
 
 /* Page Flow Navigation - Side-by-Side Capsule Design */
 .page-navigation {
@@ -954,7 +972,7 @@ html.dark .footer-logo-img {
   filter: brightness(0) invert(1) !important;
 }
 
-html.dark .text-[#D4AF37] {
+html.dark .text-\[\#D4AF37\] {
   color: #c5a059 !important;
 }
 
